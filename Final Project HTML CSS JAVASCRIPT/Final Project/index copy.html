@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang ="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name = "author" content="vishaal">
+        <meta name = "description" content = "this is a sample html document">
+        <title>The Little Taco Shop</title>
+        <link rel = "icon" href = "tacos.png" type="image/x-png">
+        <link rel = "stylesheet" href="main.css" type="text/css">
+    </head>
+    <body>
+        <header class="header">
+            <h1 class="header_h1"><strong>Little Taco Shop</strong></h1>
+            <nav class="header_nav" aria aria-label="primary navigation">
+                <ul class="header_list">
+                    <li><a href="#about us">About LTS</a></li>
+                    <li><a href="#our menu">Our Menu</a></li>
+                    <li><a href ="storehome.html">Store Home</a></li>
+                    <li><a href = "contactus.html">Contact us</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="image">
+            <h2 class="image_h2">Bienvenidos!</h2>
+            <figure>
+                <img src="../HTML CSS/tacos.png" alt="tacos and a drink" height="200" width = "300" loading = "lazy" title="Tacos and a Drink">
+            </figure>
+        </section>
+        <hr>
+        <main>
+            <section id="about us" class="main_section1">
+                <h2 class="center" class="section1_h2">ABOUT LTS</h2>
+                <br>
+                <p class="section1_para">
+                    <abbr title="the little tacos shop">LTS </abbr>was founded in<time datetime="2022">2022.</time> Our shop was built from a <strong>love of tacos</strong>. We hope our shop adds a unique and interesting place to our little town.
+                </p>
+                <br>
+                <h3>
+                    Taco Trivia
+                </h3>
+                <aside>
+                    <details>
+                        <summary class="section1_summary">When did tacos first appear in the United states</summary>
+                        <p>In 1997</p>
+                    </details>
+                </aside>
+            </section>
+            <section id="our menu" class="main_section2">
+                <h2 class="section2_h2">Our Menu</h2>
+                <br>
+                <table class="section2_tab">
+                    <caption class="section2_tabcap"><strong>Tacos</strong></caption>
+                    <thead class="tab_head">
+                        <tr class="tab_head_row">
+                            <th>Tacos</th>
+                            <th scope ="col"><abbr title="Quantity">Quantity</abbr></th>
+                            <th scope = "col">Price</th>
+                        </tr>
+                    </thead>
+                    <tbody class="tab_body">
+                        <tr>
+                            <th scope ="row" rowspan="3">Crunchy</th>
+                            <td>1</td>
+                            <td>$1.50</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>$2.50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>$3.25</td>
+                        </tr>
+                        <tr>
+                            <th scope ="row" rowspan ="3">Soft</th>
+                            <td>1</td>
+                            <td>$2.00</td>
+                        </tr>
+                        <tr>
+                            <td>2</td>
+                            <td>$3.50</td>
+                        </tr>
+                        <tr>
+                            <td>3</td>
+                            <td>$4.50</td>
+                        </tr>
+                    </tbody>
+                    <tfoot class="tab_foot">
+                        <tr class="tab_foot_row">
+                            <td colspan="3">Chips & salsa $2</td>
+                        </tr>
+                    </tfoot>
+                </table>
+                <p class="main_p1">
+                    <a href ="#">Back to top</a>
+                </p>
+            </section>
+        </main>
+        <br>
+        <footer>
+            <p2 class="footer_p2">Copyright &copy; The little Taco Shop</p2>
+        </footer>
+    </body>
+</html>

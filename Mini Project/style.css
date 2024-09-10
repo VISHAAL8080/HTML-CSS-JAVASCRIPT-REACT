@@ -1,0 +1,48 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+body{
+
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0.5rem;
+}
+header{
+    border: 2px solid black;
+    border-radius: 2rem;
+    margin:0 auto;
+    max-width: 500px;
+    font-size: 2rem;
+    line-height: 6rem;
+}
+h1{
+    background-color: gold;
+    border-radius: 2rem 2rem 0rem 0rem;
+    padding:2rem;
+}
+ul li{
+    list-style-type: none;
+    border-top: 2px solid black;
+}
+li a,
+li a:visited{
+    text-decoration: none;
+    color:purple;
+    display:block;
+    
+}
+li a:focus,
+li a:hover{
+    color:white;
+    background-color: black;
+
+}
+li:last-child a{
+    border-radius: 0 0 2rem 2rem;
+}
+section p{
+    margin:1rem auto;
+    max-width :500px;
+}

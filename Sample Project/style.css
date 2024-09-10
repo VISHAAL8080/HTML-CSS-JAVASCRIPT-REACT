@@ -1,0 +1,156 @@
+
+*{
+    margin :0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+img{
+    display: block;
+    max-width: 100%;
+    height: auto;
+    
+}
+body{
+    font: 1.5rem "Nunito", sans-serif;
+    min-height: 100vh;
+    background-color: #475569;
+    background-image: radial-gradient(whitesmoke, #475569);
+    display: flex;
+    flex-direction: column;
+}
+
+    header{
+        position: sticky;
+    }
+
+    header h2{
+        background-color:rgb(8, 2, 56);
+        text-align: center;
+        font-family: 'Courier New', Courier, monospace;
+        padding:1rem;
+        font-size: 2.2rem;
+        color: white;
+    }
+    header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        padding: 0.8rem;
+        font-size: 1.5rem;
+        border-bottom: 2px solid black;
+        background-color: white;
+    }
+    header{
+        top:0;
+    }
+    nav a:hover,
+    nav a:focus{
+        color: hsla(245, 81%, 15%, 0.363);
+    }
+    main{
+        scroll-margin-top: 8rem;
+        background-image: radial-gradient(whitesmoke,grey);
+        display:flex;
+        flex-direction:column;
+        flex-grow: 1;
+        align-items: center;
+        gap: 1rem;
+    }
+    .profile{
+        border:2px solid black;
+        border-radius: 5%;
+        margin-top:1rem;
+        margin-bottom: 1rem;
+        padding:1rem;
+        background-color: rgb(140, 172, 182);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .person{
+        display: flex;
+        flex-flow: column nowrap;
+
+    }
+    .person img{
+        border: 5px double black;
+        border-radius: 50%;
+
+    }
+    h3{
+        text-align: center;
+        margin-top:1rem;
+        font-size:1.5rem;
+        
+    }
+    figcaption{
+        text-align: center;
+        margin-top:1.5rem;
+    }
+    footer{
+        text-align: center;
+        background-color: rgb(8, 2, 56);
+        padding:0.8rem;
+        font-size:1.5rem;
+        color:white;
+        position: sticky;
+        bottom: 0;
+    }
+    @media screen and (min-width: 576px) {
+        main {
+          justify-content: center;
+          flex-flow: row wrap;
+          padding: 1rem;
+        }
+      
+        .profile{
+          width: min(100%, 400px);
+        }
+      
+        .profile:last-child {
+          order: -1;
+        }
+      }
+      
+      /* || MEDIUM */
+      @media screen and (min-width: 768px) {
+        header nav {
+          display: none;
+        }
+      
+        .profile{
+          width: min(100%, 325px);
+        }
+      
+        .person {
+          flex-flow: column-reverse;
+        }
+      
+        .profile h3 {
+          margin-top: 1rem;
+        }
+      }
+      
+      /* || LARGE */
+      @media screen and (min-width: 992px) {
+        .profile {
+          width: min(100%, 400px);
+        }
+      
+        .profile:nth-child(2) {
+          order: -1;
+        }
+      }
+      
+      /* || XL  */
+      @media screen and (min-width: 1200px) {
+        .profile {
+          /* Remove calc() - min() supports math! */
+          width: min(33% - 1rem, 500px);
+        }
+      }
+      
+
+
+

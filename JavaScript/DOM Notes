@@ -1,0 +1,198 @@
+//DOM Document Object Model Notes
+
+//Separator
+
+const view1= document.getElementById
+("view1");
+console.log(view1);
+
+const view2 = document.querySelector
+("#view2")
+console.log(view2)
+
+view1.style.display = "flex";
+view2.style.display = "none";
+
+const views = document.getElementsByClassName
+("view");
+console.log(views);
+
+const sameviews = document.querySelectorAll
+(".view");
+console.log(sameViews);
+
+//separator
+
+const evenDivs= view1.querySelectorAll
+("div:nth-of-type(2n)");
+console.log(evenDivs);
+evenDivs [4].style.backgroundColor ="purple";
+for(i=0; i < evenDivs.length; i++) {
+    evenDivs[i].style.width ="150px";
+    evenDivs[i].style.backgroundColor="green";
+}
+
+//Separator
+
+const navText = document.querySelector("nav
+h1");
+console.log(navText);
+navText.textContent = "Hello World!";
+const navBar = document.querySelector("nav");
+navBar.innerHTML = '<h1> Dhuddu </h1> <p>
+Subscribe! Click bell icon </p>'
+console.log(navBar);
+navBar.style.justify Content ="space-evenly";|
+
+//separator
+
+console.log(evenDivs [0]);
+console.log(even Divs [0].parentElement);
+console.log(evenDivs [0].parentElement.
+children);
+
+console.log(even Divs [0].parentElement.
+childNodes);
+
+console.log(even Divs [0].parentElement.
+hasChildNodes());| 
+I
+console.log(evenDivs[0].parentElement.
+lastChild);
+
+console.log(even Divs[0].parentElement.
+lastElementChild);
+
+console.log(even Divs [0].parentElement.
+firstChild);
+
+console.log(even Divs[0].parentElement.
+firstElementChild);
+
+console.log(even Divs[0].nextSibling);
+
+console.log(evenDivs [0].nextElementSibling)
+console.log(even Divs [0].nextElementSibling.
+nextElementSibling);
+
+console.log(even Divs [0].previousSibling);
+console.log(evenDivs[0].
+previousElementSibling);
+
+//Separator
+
+view2.lastElementChild.remove();
+while(view2.lastChild){
+    view2.lastChild.remove();
+}
+const newDiv = document.createElement("div");
+newDiv.textContent = "Hi";
+newDiv.style.width ="100px";
+view2.append(newDiv);
+
+
+//Example 
+
+const createDiv = (parent, iter) => {
+const newDiv = document.createElement
+("div");
+newDiv.textContent = iter;
+newDiv.style.width ="100px";
+newDiv.style.height="100px";
+newDiv.style.margin ="10px"
+newDiv.style.backgroundColor = "yellow";
+newDiv.style.color="black";
+newDiv.style.display ="flex";
+newDiv.style.justifyContent = "center";
+newDiv.style.alignItems = "center";
+parent.append(new Div);
+}
+for (let i=0;i<=12; i++){
+createDiv (view, i);
+}
+
+.......................
+.......................
+.......................
+//Events and EventListeners//
+.......................
+.......................
+.......................
+
+CONST doSomething = ()=> {
+alert("doing Something");
+};
+h2.addEventListener("click", doSomething,
+false);
+h2.removeEventListener("click", doSomething,
+false);
+I
+h2.addEventListener("click", function (event)
+{
+console.log(event.target);
+event.target.textContent = "Subscribed";
+});
+
+//separator
+
+document.addEventListener
+("readystatechange", (event) => {
+if (event.target.readyState == 
+"complete"){
+    console.log("complete");
+    initApp(); I
+}
+})
+const initApp = ( ) => {
+const view = document.querySelector
+("#view2");
+const div = view.querySelector("div");
+const h2 = div.querySelector("h2");
+DHUDDU
+view.addEventListener("click", (event)=>
+{
+view.style.backgroundColor =
+"purple";
+}, true)
+div.addEventListener("click", (event) => {
+div.style.backgroundColor = "blue";
+}, true)
+
+//separator
+
+view.addEventListener("click", (event) =>
+{
+Dview.classList.toggle("purple");
+view.classList.toggle("darkblue");
+})
+div.addEventListener("click", (event) => {
+div.classList.toggle("green");
+div.classList.toggle("black");
+})
+
+const nav = document.querySelector
+("nav");
+nav.addEventListener("mouseover",
+(event) => {
+event.target.classList.add
+("height100");
+});
+nav.addEventListener("mouseout", (event)
+=> {
+event.target.classList.remove
+("height100");
+
+//separator
+
+const initApp = () => {
+const view3 = document.querySelector
+("#view3");
+const myForm = view3.querySelector
+("#myForm");
+myForm.addEventListener("submit",
+(event) => {
+event.preventDefault();
+console.log("submit event");
+});
+}
+

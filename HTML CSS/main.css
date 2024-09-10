@@ -1,0 +1,314 @@
+@import url('https://fonts.googleapis.com/css2?family=Playwrite+ID:wght@100..400&display=swap');
+
+/*RESET*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+}
+img{
+    display: block;
+    width: 100%;
+    height: auto;
+}
+input,button,textarea{
+    font: inherit;
+} 
+
+/*VARIABLES*/
+:root{
+    /*STANDARD BORDERS*/
+    --BORD-COLR:2px solid black;
+    --BORD-RAD:15px;
+    /*STANDARD COLOURS*/
+    --COLR-B:black;
+    --COLR-W:white;
+    --BACK-COLR-W:white;
+    --BACK-COLR-R:red;
+    --BACK-COLR-B:black;
+    --BACK-IMG:linear-gradient(orange,white);
+    /*FONTS*/
+    --FONT-COLR:black;
+    --FONT-SIZE:clamp(1.2rem,2.2vh,1.5rem);
+    --FONT-NAV:min(2.2vh,1rem);
+    --FONT-HEAD-SIZE:clamp(1rem,2.2vh,1.5rem);
+    --FONT-LIST-SIZE:clamp(1rem,2.2vh,1.5rem);
+
+    /*HOVER*/
+    --HOVER:rgba(93, 20, 20, 0.312);
+    --HOVER-HEAD:red;
+    /*STANDARD PADDING*/
+    --PADDING:0.25rem;
+    --PADDING-HEAD-LIST:0.75rem;
+    --PADDING-HEAD:0.75rem 3rem 0.75rem 3rem;
+
+}
+@media (prefers-color-scheme : dark) {
+    :root{
+        --FONT-FAM:"Nunito"
+    }
+}
+
+/*UTILITY CLASSES*/
+.nowrap{
+    flex-wrap: nowrap;
+}
+.center{
+    text-align: center;
+}
+.offscreen{
+    position: relative;
+    left: -20000px;
+}
+
+/*GENERAL STYLES*/
+
+html{
+    font-size:var(--FONT-SIZE);
+    font-family: 'Courier New', Courier, monospace;
+    scroll-behavior: smooth;
+    background-image: var(--BACK-IMG);
+}
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    min-height: 100vh;
+    max-width: max(800px,100vh);
+    margin: 0 auto;
+    border-left:var(--BORD-COLR) ;
+    border-right: var(--BORD-COLR);
+}
+h2,h3{
+    font-size: var(--FONT-HEAD-SIZE);
+    font-family: "Playwrite ID", cursive;
+    padding: 1rem;
+
+}
+header,footer{
+    position: sticky;
+}
+footer{
+    bottom: 0;
+    z-index: 4;
+}
+
+/*Main Styles*/
+
+.header{
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    font-family: var(--FONT-HEAD);
+    display: block;
+}
+.header_h1{
+    text-align: center;
+    padding: 0.75rem 14rem 0.75rem 14rem ;
+    border: var(--BORD-COLR);
+    background-color: var(--BACK-COLR-B);
+    color: var(--COLR-W);
+    font-weight:bolder;
+    font-size: var(--FONT-HEAD-SIZE);
+    font-family: "Playwrite ID", cursive;
+    font-optical-sizing: auto;
+    font-weight: 900;
+    font-style: normal;
+    min-width: min(800px,100vh);
+}
+.header_list{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    gap: 1rem;
+    padding: var(--PADDING-HEAD-LIST);
+    list-style-type: none;
+    background-color: var(--BACK-COLR-W);
+    font-size: var(--FONT-nav);
+    font-weight: bold;
+    border-bottom: var(--BORD-COLR);
+}
+li{
+    font-size: var(--FONT-NAV);
+    list-style-type: none;
+    color: purple;
+}
+li a:visited{
+    color:blue;
+}
+
+li a{
+    color: blue;
+}
+li a:hover,
+li a:focus{
+    color: rgba(115, 66, 66, 0.397);
+}
+.image{
+    background-color: var(--BACK-COLR-W);
+}
+
+/*About LTS*/
+
+.main_section1{
+    background-color: var(--BACK-COLR-W);
+}
+.section1_h2{
+    font-weight: 900;
+
+}
+.section1_para{
+    text-indent: 4em;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    line-height: 1rem;
+    word-spacing: 0.75rem;
+    margin-left: 1rem;
+}
+.section1_summary{
+    margin-left: 1rem;
+}
+
+/* Menu Design*/
+
+.main_section2{
+    background-color: var(--BACK-COLR-W);
+}
+.section2_tab{
+    text-align: center;
+    max-width:max(800px,100vh);
+    position: relative;
+    left: 12px;
+    font-weight: 900;
+}
+tr,td,th{
+    border: var(--BORD-COLR);
+}
+tr,td,th{
+    padding: 1rem 4.5rem 1rem 4.5rem;
+}
+
+.section2_tabcap{
+    text-align: center;
+    margin-bottom: 1rem;
+    font-weight: bold;
+    margin-top: -20px;
+}
+.tab_head_row th:first-child{
+    border-top-left-radius: var(--BORD-RAD);
+}
+.tab_head_row th:last-child{
+    border-top-right-radius: var(--BORD-RAD);
+}
+.tab_foot_row td{
+    border-bottom-left-radius: var(--BORD-RAD);
+    border-bottom-right-radius:var(--BORD-RAD);
+}
+
+/*footer design*/
+
+footer{
+    background-color: var(--BACK-COLR-W);
+}
+.main_p1{
+    text-align: center;
+    background-color: var(--BACK-COLR-W);
+    padding: 1rem;
+}
+.main_p1 a{
+    text-decoration: none;
+}
+.main_p1 a:active{
+    color: var(--COLR-B);
+}
+.main_p1 a:visited{
+    color: blue;
+}
+.main_p1 a:hover,
+.main_p1 a:focus{
+    color: rgba(139, 63, 156, 0.312);
+}
+footer{
+    background-color: var(--BACK-COLR-B);
+    text-align: center;
+    padding:1rem;
+    color: var(--COLR-W);
+}
+
+/*Animation*/
+
+.image {
+    position: relative;
+}
+
+.image_h2 {
+    background-color: var(--COLR-B);
+    color: var(--COLR-W);
+    padding: 0.25em 0.5em;
+    text-shadow: 2px 2px 5px black;
+    position: absolute;
+    top: -100px;
+    left: 20px;
+    animation: popup 0.5s ease-in-out 1s forwards;
+    letter-spacing: 0.2em;
+}
+
+@keyframes popup {
+    0% {
+        top: -20px;
+        transform: skew(0deg, -5deg) scaleY(0);
+    }
+
+    80% {
+        top: 30px;
+        transform: skew(10deg, -5deg) scaleY(1.2);
+    }
+
+    100% {
+        top: 20px;
+        transform: skew(-10deg, -5deg) scaleY(1);
+    }
+}
+
+
+/*StoreHours Additional Design*/
+.header_h1{
+    font-weight: 900;
+    padding-right: 3rem;
+    padding-left: 3rem;
+}
+
+dt{
+    margin-bottom: 10px;
+    margin-left: 10px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: rgba(77, 63, 63, 0.436);
+}
+dd{
+    margin-left: 40px;
+    font-style: italic;
+    font-weight: 900;
+}
+.section1_h3{
+    font-family: 'Courier New', Courier, monospace;
+}
+
+/*Contact Us Additional designs*/
+
+.form_fieldset{
+    width: 750px;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    align-content: center; 
+    border: var(--BORD-COLR);
+    border-radius: var(--BORD-RAD);
+    margin-bottom: 1rem;
+}
+.form_container{
+    display: grid;
+    place-content: center;
+    padding: clamp(1rem,2.2vh,1.5rem)
+}
